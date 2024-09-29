@@ -1,0 +1,54 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://8jsv0mwan0i3"]
+
+[sub_resource type="SystemFont" id="SystemFont_cmrtx"]
+font_names = PackedStringArray("Berlin Sans FB")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvtrx"]
+border_width_left = 100
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2r15b"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_704yq"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.906493, 0.906493, 0.906493, 1)
+border_width_right = 100
+border_color = Color(0.8, 0.8, 0.8, 0.8)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_diboc"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pncms"]
+bg_color = Color(0, 0, 0, 0.713726)
+
+[sub_resource type="SystemFont" id="SystemFont_ergsu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkapl"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+draw_center = false
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/fonts/font = SubResource("SystemFont_cmrtx")
+Button/styles/focus = SubResource("StyleBoxFlat_jvtrx")
+Button/styles/hover = SubResource("StyleBoxFlat_2r15b")
+Button/styles/normal = SubResource("StyleBoxFlat_704yq")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/styles/normal = SubResource("StyleBoxFlat_diboc")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_pncms")
+RichTextLabel/font_sizes/normal_font_size = 12
+RichTextLabel/fonts/normal_font = SubResource("SystemFont_ergsu")
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_pkapl")
