@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://sihqobm82470"
-path="res://.godot/imported/map_2024.a.fbx-86bd28b20b0b4abf532a44fa0402f061.scn"
+path="res://.godot/imported/map_2024.a.fbx-3ebbe14c0a6fd1afc3f9061ccd9514f5.scn"
 
 [deps]
 
-source_file="res://Game Assets/Models/map_2024.a.fbx"
-dest_files=["res://.godot/imported/map_2024.a.fbx-86bd28b20b0b4abf532a44fa0402f061.scn"]
+source_file="res://OpenWorld/Game Assets/Models/map_2024.a.fbx"
+dest_files=["res://.godot/imported/map_2024.a.fbx-3ebbe14c0a6fd1afc3f9061ccd9514f5.scn"]
 
 [params]
 

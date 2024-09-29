@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cbf6s1l0edblh"
-path="res://.godot/imported/post_a.gltf-4e93da59882ff1fbaa8e5598f65b3db4.scn"
+path="res://.godot/imported/post_a.gltf-80f7b4a0e0ac27c2146f203058ce77b1.scn"
 
 [deps]
 
-source_file="res://Game Assets/Models/post_a.gltf"
-dest_files=["res://.godot/imported/post_a.gltf-4e93da59882ff1fbaa8e5598f65b3db4.scn"]
+source_file="res://OpenWorld/Game Assets/Models/post_a.gltf"
+dest_files=["res://.godot/imported/post_a.gltf-80f7b4a0e0ac27c2146f203058ce77b1.scn"]
 
 [params]
 
