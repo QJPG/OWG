@@ -1,4 +1,15 @@
+"""
+
+DEPRECATED
+
+"""
+
+
 extends Node
+
+class_name Application
+
+static var SINGLETON : Application = Application.new()
 
 enum NETWORK_CHANNEL {
 	CHANNEL_EVENT,
@@ -57,6 +68,9 @@ func application_create_network(transport : NetworkTransport) -> void:
 			multiplayer.connection_failed.connect(_client_connection_failed)
 			multiplayer.connected_to_server.connect(_client_connection_success)
 
+func _init() -> void:
+	return
+
 func _ready() -> void:
 	lstr.open("Game Assets/Texts/en.json")
 	
@@ -73,4 +87,4 @@ func _ready() -> void:
 			
 			DisplayServer.window_set_title("(Run Program in Headless Mode)Server[%s" % _transport.port)
 	
-	Application.application_create_network(_transport)
+	application_create_network(_transport)

@@ -1,3 +1,7 @@
 {
-	"warn.controls.a": "[color=gray][W][A][S][D][/color] to move your character.\nPress [color=gray][ESC][/color] to open menu."
+	"HINT.CONTROLS": "[color=gray][W][A][S][D][/color] to move your character.\nPress [color=gray][ESC][/color] to open menu.",
+	"HINT.HOWNETWORK": "Open the menu ([color=gray]ESC[/color]) and select [color=yellow]Connect Game[/color] to play on an existing server or host locally in [color=yellow]Open Game[/color].",
+	"HINT.SERVERCONNECTED": "Connected to external game!",
+	"HINT.SERVERDISCONNECTED": "Disconnected from external game!",
+	"HINT.SERVERSTARTED": "Local game hosted on port [color=yellow]$@[/color]",
 }

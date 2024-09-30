@@ -15,9 +15,10 @@ content_margin_left = 6.0
 content_margin_top = 6.0
 content_margin_right = 6.0
 content_margin_bottom = 6.0
-bg_color = Color(0.906493, 0.906493, 0.906493, 1)
-border_width_right = 100
-border_color = Color(0.8, 0.8, 0.8, 0.8)
+bg_color = Color(0.356863, 0, 1, 1)
+border_width_left = 115
+border_width_right = 256
+border_color = Color(0.8, 0.8, 0.8, 0)
 border_blend = true
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_diboc"]
@@ -40,7 +41,7 @@ content_margin_bottom = 5.0
 draw_center = false
 
 [resource]
-Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_hover_color = Color(1, 1, 1, 1)
 Button/fonts/font = SubResource("SystemFont_cmrtx")
 Button/styles/focus = SubResource("StyleBoxFlat_jvtrx")

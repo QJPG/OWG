@@ -1,6 +1,6 @@
 extends NTNode
 
-class_name NetworkManager
+class_name NetworkManager2
 
 class PeerProxy extends RefCounted:
 	var identity_profile_name : StringName

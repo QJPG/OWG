@@ -71,6 +71,35 @@ static func WAIT(time : float) -> void:
 	await SINGLETON.get_tree().create_timer(time).timeout
 	ISWAITING = false
 
+static func ALRT(text : String, author : String = "", time := 14.0) -> void:
+	if not SINGLETON:
+		return
+	
+	var alrt_container := PanelContainer.new()
+	
+	var alrt_text := RichTextLabel.new()
+	alrt_text.bbcode_enabled = true
+	alrt_text.scroll_active = false
+	alrt_text.fit_content = true
+	alrt_text.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
+	alrt_text.text = "%s%s" % ["[u][color=gray]%s[/color][/u]:\n" % author if author.length() > 0 else "", "[indent]%s[/indent]" % text if author.length() > 0 else text]
+	alrt_text.visible_ratio = 0.0
+	
+	alrt_container.add_child(alrt_text)
+	
+	SINGLETON._objct_alerts_box.add_child(alrt_container)
+	
+	var t := alrt_container.create_tween()
+	
+	t.tween_property(alrt_text, "visible_ratio", 1.0, 0.4)
+	t.tween_interval(time)
+	t.tween_property(alrt_text, "visible_ratio", 0.0, 0.2)
+	t.play()
+	
+	await t.finished
+	
+	alrt_container.queue_free()
+
 var in_menu : bool : set = _set_menu_visiblity
 
 @export_category("Warning")
@@ -82,6 +111,12 @@ var in_menu : bool : set = _set_menu_visiblity
 
 @export_category("Menu")
 @export var _object_menu_panel : Panel
+@export var _button_join_game : Button
+@export var _button_host_game : Button
+
+@export_category("Outro")
+@export var _objct_alerts_box : VBoxContainer
+@export var _object_disp_time : Label
 
 func _set_menu_visiblity(is_visible : bool) -> void:
 	in_menu = is_visible
@@ -96,8 +131,6 @@ func _set_menu_visiblity(is_visible : bool) -> void:
 	get_tree().paused = in_menu
 
 func _init() -> void:
-	unique_name_in_owner = true
-	
 	SINGLETON = self
 
 
@@ -110,10 +143,18 @@ func _exit_tree() -> void:
 
 
 func _ready() -> void:
+	_button_host_game.pressed.connect(func():
+		NetworkManager.HOST(22023)
+		in_menu = false)
+	_button_join_game.pressed.connect(func():
+		NetworkManager.CONN("127.0.0.1", 22023)
+		in_menu = false)
+	
 	in_menu = false
 	
 	WAIT(1.0)
-	WARN(lstr.Lstr("warn.controls.a"), 9.0)
+	WARN(CSTD.LSTR("HINT.CONTROLS"), 9.0)
+	WARN(CSTD.LSTR("HINT.HOWNETWORK"), 9.0)
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
@@ -122,4 +163,8 @@ func _input(event: InputEvent) -> void:
 			in_menu = !in_menu
 
 func _process(delta: float) -> void:
-	return
+	_object_disp_time.text = "%s:%s:%s" % [
+		CMap.GLOBALTIME_HOUR,
+		CMap.GLOBALTIME_MINS,
+		CMap.GLOBALTIME_SECS
+	]
