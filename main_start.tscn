@@ -14,4 +14,3 @@ script = ExtResource("2_lvtok")
 [node name="GUI" parent="." instance=ExtResource("3_5jcnk")]
 
 [node name="Map" parent="." instance=ExtResource("4_hbwjg")]
-time_active = true

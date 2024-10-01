@@ -99,7 +99,6 @@ static func HOST(listen_port : int, capacity : int = 600) -> void:
 		SINGLETON.multiplayer.multiplayer_peer = enet
 		
 		GUIManager.ALRT(CSTD.LSTR("HINT.SERVERSTARTED", [listen_port]))
-		GUIManager.ALRT(CSTD.LSTR("HINT.SERVERSTARTED", [listen_port]), "Alert!")
 
 func _peer_connected(peer : int) -> void:
 	print("[NETWORK] Peer Connected: %s" % peer)
